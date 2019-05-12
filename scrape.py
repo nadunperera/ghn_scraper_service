@@ -1,4 +1,5 @@
 from spiders import woolworths
+from helper import pandas
 
 chrome_path = r'C:\Users\nadun\source\repos\ghn_scraper_service\chromedriver_win32\chromedriver.exe'
 
@@ -11,3 +12,4 @@ chrome_path = r'C:\Users\nadun\source\repos\ghn_scraper_service\chromedriver_win
 url = 'https://www.woolworths.com.au/shop/browse/dairy-eggs-fridge/cheese'
 
 woolworths.crawl(chrome_path, url)
+pandas.distinct()

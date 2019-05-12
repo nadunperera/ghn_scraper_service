@@ -14,7 +14,7 @@ def crawl(chrome_path, url):
     print(f'Total number of products crawled: {len(total_products)}')
 
     # output to a file
-    with open('output.csv', 'w', newline='') as csv_file:
+    with open('crawl_results.csv', 'w', newline='') as csv_file:
         writer = csv.writer(csv_file)
         writer.writerow(['Product Name', 'Price'])
 

@@ -1,8 +1,9 @@
 # IDEA folders
 .idea/
 
-# OUTPUT file
+# OUTPUT files
 output.csv
+crawl_results.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
