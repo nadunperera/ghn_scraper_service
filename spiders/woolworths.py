@@ -2,6 +2,8 @@ from selenium import webdriver
 import time
 import csv
 
+from selenium.common.exceptions import NoSuchElementException
+
 
 def crawl(chrome_path, url):
     options_headless = webdriver.ChromeOptions()
@@ -24,7 +26,10 @@ def crawl(chrome_path, url):
 
             # write to the file whatever you get from crawling
             for product in products:
-                writer.writerow([product.find_element_by_class_name('shelfProductTile-descriptionLink').text, f"{product.find_element_by_class_name('price-dollars').text}.{product.find_element_by_class_name('price-centsPer').text}"])
+                try:
+                    writer.writerow([product.find_element_by_class_name('shelfProductTile-descriptionLink').text, f"{product.find_element_by_class_name('price-dollars').text}.{product.find_element_by_class_name('price-centsPer').text}"])
+                except NoSuchElementException:
+                    pass  # passing if unable to locate above elements
 
             total_products = total_products + products
             print(f'Total number of products crawled: {len(total_products)}')

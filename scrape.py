@@ -1,7 +1,7 @@
 from spiders import woolworths
 from helpers import pandas
 
-chrome_path = r'C:\Users\nadun\source\repos\ghn_scraper_service\chromedriver_win32\chromedriver.exe'
+chrome_path = r'chromedriver_win32\chromedriver.exe'
 
 # Do not use the url with the page number.
 # Make sure it is clean as below. Spider will be adding the pageNumber potion while crawling.
