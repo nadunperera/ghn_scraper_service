@@ -10,6 +10,8 @@ ghn_scraper_service is a collection of scrapers written using selenium. This was
     $ pip install -r requirements.txt
     $ python scrape.py
 
+### Output
+    Output will be written to output.csv
 
 ### Current Scrapers
 * Woolworths Online

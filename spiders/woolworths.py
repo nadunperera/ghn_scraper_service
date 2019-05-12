@@ -1,5 +1,6 @@
 from selenium import webdriver
 import time
+import csv
 
 
 def crawl(chrome_path, url):
@@ -12,13 +13,23 @@ def crawl(chrome_path, url):
     total_products = products
     print(f'Total number of products crawled: {len(total_products)}')
 
-    while products:
-        page_number = page_number + 1
-        products = get_product_details(url, page_number, driver)
-        total_products = total_products + products
-        print(f'Total number of products crawled: {len(total_products)}')
-        if not products:
-            break
+    # output to a file
+    with open('output.csv', 'w', newline='') as csv_file:
+        writer = csv.writer(csv_file)
+        writer.writerow(['Product Name', 'Price'])
+
+        while products:
+            page_number = page_number + 1
+            products = get_product_details(url, page_number, driver)
+
+            # write to the file whatever you get from crawling
+            for product in products:
+                writer.writerow([product.find_element_by_class_name('shelfProductTile-descriptionLink').text, f"{product.find_element_by_class_name('price-dollars').text}.{product.find_element_by_class_name('price-centsPer').text}"])
+
+            total_products = total_products + products
+            print(f'Total number of products crawled: {len(total_products)}')
+            if not products:
+                break
 
 
 def get_next_page(url=None, page_number=None):
