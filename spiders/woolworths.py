@@ -13,7 +13,7 @@ def crawl(chrome_path, url):
     print(f'Total number of products crawled: {len(total_products)}')
 
     while products:
-        page_number = ++page_number
+        page_number = page_number + 1
         products = get_product_details(url, page_number, driver)
         total_products = total_products + products
         print(f'Total number of products crawled: {len(total_products)}')
