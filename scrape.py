@@ -12,7 +12,11 @@ chrome_path = r'src/chromedriver_win32/chromedriver.exe'
 
 scrape_url = 'https://www.woolworths.com.au/shop/browse/dairy-eggs-fridge/cheese'
 
+# setting up the browser
 browser = chrome.Browser(chrome_path)
 
+# do the crawl
 woolworths.crawl(browser.driver, scrape_url)
+
+# distinct results
 pandas.distinct()
