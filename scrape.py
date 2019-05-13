@@ -1,7 +1,8 @@
-from spiders import woolworths
-from helpers import pandas
+from src.spiders import woolworths
+from src.helpers import pandas
+from src.helpers import chrome
 
-chrome_path = r'chromedriver_win32\chromedriver.exe'
+chrome_path = r'src/chromedriver_win32/chromedriver.exe'
 
 # Do not use the url with the page number.
 # Make sure it is clean as below. Spider will be adding the pageNumber potion while crawling.
@@ -9,7 +10,9 @@ chrome_path = r'chromedriver_win32\chromedriver.exe'
 # https://www.woolworths.com.au/shop/browse/fruit-veg/fruit
 # https://www.woolworths.com.au/shop/browse/drinks/soft-drinks
 
-url = 'https://www.woolworths.com.au/shop/browse/dairy-eggs-fridge/cheese'
+scrape_url = 'https://www.woolworths.com.au/shop/browse/dairy-eggs-fridge/cheese'
 
-woolworths.crawl(chrome_path, url)
+browser = chrome.Browser(chrome_path)
+
+woolworths.crawl(browser.driver, scrape_url)
 pandas.distinct()
