@@ -1,6 +1,9 @@
 # IDEA folders
 .idea/
 
+# IDEA folders
+.vscode/
+
 # OUTPUT files
 output.csv
 crawl_results.csv
