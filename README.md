@@ -16,4 +16,5 @@ ghn_scraper_service is a collection of scrapers written using selenium. This was
     output will be written in to output.csv.
 
 ### Current Scrapers
-* Woolworths Online
+* Woolworths
+* JB Hi-Fi
