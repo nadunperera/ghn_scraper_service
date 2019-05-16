@@ -1,7 +1,7 @@
 ghn_scraper_service
 =======
 
-ghn_scraper_service is a collection of scrapers written using selenium. This was done using chromedriver_win32.
+ghn_scraper_service is a collection of scrapers written using selenium and python.
 
 ### Usage
 
