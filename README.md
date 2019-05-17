@@ -5,11 +5,14 @@ ghn_scraper_service is a collection of scrapers written using selenium and pytho
 
 ### Usage
 
-    For selenium/chrome use docker run -d -p 4444:4444 selenium/standalone-chrome
-    For selenium/phantomjs use $ docker run -d -p 8910:8910 wernight/phantomjs phantomjs --webdriver=8910
+    For selenium/chrome:
+    $ docker run -d -p 4444:4444 selenium/standalone-chrome
+    
+    For selenium/phantomjs:
+    $ docker run -d -p 8910:8910 wernight/phantomjs phantomjs --webdriver=8910
 
-    edit scrape_url in scapy.py
-    change spider time.sleep according your preference. currently set to 2 seconds at get_product_details.
+    Edit scrape_url in scapy.py
+    Change spider time.sleep according your preference. currently set to 2 seconds at get_product_details.
     
     $ pip install -r requirements.txt
     $ python scrape.py
