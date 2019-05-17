@@ -11,7 +11,9 @@ from src.helpers import pandas, browse
 # scrape_url = 'https://www.jbhifi.com.au/computers-tablets/' #put one category url
 scrape_url = "https://shop.coles.com.au/a/a-national/everything/browse/entertaining-at-home/cheese-board-selections?pageNumber=1"
 
-# setting up the browser
+# select the browser driver to use
+# chrome_driver for chrome
+# phantomjs_driver for phantomjs
 browser = browse.Browser()
 
 # do the crawl
