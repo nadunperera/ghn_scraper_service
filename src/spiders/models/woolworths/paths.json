@@ -1,0 +1,9 @@
+{
+    "path": [
+        {
+            "startUrl": "https://www.woolworths.com.au/shop/browse/",
+            "singleProductsXpath": "//wow-tile/div/wow-shelf-product-tile",
+            "bundleProductsXpath": "//wow-tile/div/wow-shelf-bundle-tile"
+        }
+    ]
+}

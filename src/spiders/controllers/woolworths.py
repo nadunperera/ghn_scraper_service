@@ -41,6 +41,11 @@ def get_products(scrape_url, page_number, driver):
     driver.get(scrape_url_with_page)
     print(f"Crawling page {scrape_url_with_page}")
     time.sleep(2)
-    products = driver.find_elements_by_class_name("shelfProductTile")
+    products = driver.find_elements_by_xpath(
+        "//wow-tile/div/wow-shelf-product-tile"
+    )
+    bundle_tile_products = driver.find_elements_by_xpath(
+        "//wow-tile/div/wow-shelf-bundle-tile"
+    )
     print(f"{len(products)} products on the page.")
     return products

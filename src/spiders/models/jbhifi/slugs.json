@@ -1,0 +1,43 @@
+{
+    "categories": [
+        {
+            "name": "fruit-veg"
+        },
+        {
+            "name": "meat-seafood-deli"
+        },
+        {
+            "name": "bakery"
+        },
+        {
+            "name": "dairy-eggs-fridge"
+        },
+        {
+            "name": "pantry"
+        },
+        {
+            "name": "freezer"
+        },
+        {
+            "name": "drinks"
+        },
+        {
+            "name": "liquor"
+        },
+        {
+            "name": "pet"
+        },
+        {
+            "name": "baby"
+        },
+        {
+            "name": "health-beauty"
+        },
+        {
+            "name": "household"
+        },
+        {
+            "name": "lunch-box"
+        }
+    ]
+}

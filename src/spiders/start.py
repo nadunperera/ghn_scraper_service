@@ -25,9 +25,9 @@ class Crawl:
         )
 
     def get_start_url(self):
-        with open(f"src/spiders/models/{self.model_name}/urls.json") as json_file:
+        with open(f"src/spiders/models/{self.model_name}/paths.json") as json_file:
             data = json.load(json_file)
-            for url in data["urls"]:
+            for url in data["path"]:
                 print(self.model_name + " start URL is " + url["startUrl"])
                 start_url = url["startUrl"]
                 return start_url
