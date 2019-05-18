@@ -2,22 +2,17 @@ import time, csv
 from selenium.common.exceptions import NoSuchElementException
 
 
-def crawl(driver, scrape_url):
+def scrape(category_url, driver):
     page_number = 1
-    products = get_product_details(scrape_url, 1, driver)
-    total_products = products
-    print(f"Total number of products crawled: {len(total_products)}")
+    products = get_products(category_url, page_number, driver)
+    total_products = 0
 
     # output to a file
     with open("crawl_results.csv", "w", newline="") as csv_file:
         writer = csv.writer(csv_file)
-        writer.writerow(["Product Name", "Price"])
+        writer.writerow(["product_name", "price"])
 
         while products:
-            page_number = page_number + 1
-            products = get_product_details(scrape_url, page_number, driver)
-
-            # write to the file whatever you get from crawling
             for product in products:
                 try:
                     writer.writerow(
@@ -29,12 +24,11 @@ def crawl(driver, scrape_url):
                         ]
                     )
                 except NoSuchElementException:
-                    pass  # passing if unable to locate above elements
-
-            total_products = total_products + products
-            print(f"Total number of products crawled: {len(total_products)}")
-            if not products:
-                break
+                    pass  # skip if no element found
+            total_products = total_products + len(products)
+            print(f"Total number of products added to the csv: {total_products}")
+            page_number = page_number + 1
+            products = get_products(category_url, page_number, driver)
 
 
 def get_next_page(scrape_url, page_number):
@@ -42,11 +36,11 @@ def get_next_page(scrape_url, page_number):
     return scrape_url
 
 
-def get_product_details(scrape_url, page_number, driver):
+def get_products(scrape_url, page_number, driver):
     scrape_url_with_page = get_next_page(scrape_url, page_number)
     driver.get(scrape_url_with_page)
-    print(f"Crawling: {scrape_url_with_page}")
+    print(f"Crawling page {scrape_url_with_page}")
     time.sleep(2)
     products = driver.find_elements_by_class_name("shelfProductTile")
-    print(f"Found {len(products)} products.")
+    print(f"{len(products)} products on the page.")
     return products
