@@ -33,15 +33,15 @@ class Crawl:
             data = json.load(json_file)
             for path in data["paths"]:
                 print(self.model_name + " start URL is " + path["startUrl"])
-                print(self.model_name + " single product xpath is " + path["singleProductsXpath"])
-                print(self.model_name + " bundle product xpath is " + path["bundleProductsXpath"])
+                print(self.model_name + " single product selector is " + path["singleProductsXpath"])
+                print(self.model_name + " bundle product selector is " + path["bundleProductsXpath"])
                 output = {}
                 output["start_url"] = path["startUrl"]
-                output["single_product_xpath"] = path["singleProductsXpath"]
+                output["single_product_selector"] = path["singleProductsXpath"]
                 output["single_product_name"] = path["singleProductName"]
                 output["single_product_dollar"] = path["singleProductDollar"]
                 output["single_product_cents"] = path["singleProductCents"]
-                output["bundle_product_xpath"] = path["bundleProductsXpath"]
+                output["bundle_product_selector"] = path["bundleProductsXpath"]
                 output["bundle_product_title"] = path["bundleProductTitle"]
                 output["bundle_product_names"] = path["bundleProductNames"]
                 output["bundle_product_prices"] = path["bundleProductPrices"]
