@@ -1,43 +1,43 @@
 {
     "categories": [
         {
-            "name": "fruit-veg"
+            "name": "computers-tablets/apple-macbook/"
         },
         {
-            "name": "meat-seafood-deli"
+            "name": "computers-tablets/dell-laptops/"
         },
         {
-            "name": "bakery"
+            "name": "computers-tablets/hp-laptops/"
         },
         {
-            "name": "dairy-eggs-fridge"
+            "name": "computers-tablets/surface/"
         },
         {
-            "name": "pantry"
+            "name": "computers-tablets/lenovo-laptops/"
         },
         {
-            "name": "freezer"
+            "name": "computers-tablets/"
         },
         {
-            "name": "drinks"
+            "name": "computers-tablets/"
         },
         {
-            "name": "liquor"
+            "name": "computers-tablets/"
         },
         {
-            "name": "pet"
+            "name": "computers-tablets/"
         },
         {
-            "name": "baby"
+            "name": "computers-tablets/"
         },
         {
-            "name": "health-beauty"
+            "name": "computers-tablets/"
         },
         {
-            "name": "household"
+            "name": "computers-tablets/"
         },
         {
-            "name": "lunch-box"
+            "name": "computers-tablets/"
         }
     ]
 }

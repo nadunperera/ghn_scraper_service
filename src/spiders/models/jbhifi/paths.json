@@ -1,7 +1,7 @@
 {
     "paths": [
         {
-            "startUrl": "https://www.woolworths.com.au/shop/browse/",
+            "startUrl": "https://www.jbhifi.com.au/",
             "singleProductsXpath": "//wow-tile/div/wow-shelf-product-tile",
             "singleProductName": "shelfProductTile-descriptionLink",
             "singleProductDollar": "price-dollars",

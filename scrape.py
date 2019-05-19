@@ -1,4 +1,4 @@
-from src.helpers import pandas, browser
+from src.helpers import browser
 from src.spiders import start
 
 
@@ -17,6 +17,3 @@ driver = browser.Driver("http://127.0.0.1:4444/wd/hub")
 
 crawler = start.Crawl(driver.chrome, "woolworths")
 crawler.get_categories()
-
-# distinct results
-pandas.distinct()

@@ -1,16 +1,16 @@
 from pandas import read_csv
 
 
-def distinct():
+def distinct(file_name):
     print("intiating distinct...")
     try:
         df = (
-            read_csv("crawl_results.csv", usecols=["product_name", "price"])
+            read_csv("temp_dump.csv", usecols=["product_name", "price"])
             .drop_duplicates(keep="first")
             .reset_index()
         )
-        final_result = "final_result.csv"
+        final_result = file_name
         df.to_csv(final_result, index=False)
-        print("removed duplicates, created final_result.csv")
+        print("removed duplicates, created final csv file.")
     except FileNotFoundError:
-        print("crawl_results.csv must exsist to distinct results.")
+        print("temp_dump.csv must exsist to distinct results.")
