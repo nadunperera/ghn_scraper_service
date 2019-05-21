@@ -4,12 +4,7 @@
             "startUrl": "https://www.jbhifi.com.au/",
             "singleProductsXpath": "//*[@id='productsContainer']/ul/li[3]/div",
             "singleProductName": ".//h4",
-            "singleProductDollar": "p.price>span.amount",
-            "singleProductCents": "price-centsPer",
-            "bundleProductsXpath": "//wow-tile/div/wow-shelf-bundle-tile",
-            "bundleProductTitle": "shelfBundleTile-title",
-            "bundleProductNames": "shelfProductVariant-variant",
-            "bundleProductPrices": "shelfProductVariant-price"
+            "singleProductDollar": "p.price>span.amount"
         }
     ]
 }
