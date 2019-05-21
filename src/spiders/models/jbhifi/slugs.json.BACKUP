@@ -1,0 +1,46 @@
+{
+    "categories": [
+        {
+            "name": "computers-tablets/laptops/"
+        },
+        {
+            "name": "computers-tablets/tablets/"
+        },
+        {
+            "name": "computers-tablets/desktops/"
+        },
+        {
+            "name": "computers-tablets/monitors/"
+        },
+        {
+            "name": "computers-tablets/monitor-mounts--stands/"
+        },
+        {
+            "name": "computers-tablets/virtual-reality/"
+        },
+        {
+            "name": "computers-tablets/projectors/"
+        },
+        {
+            "name": "computers-tablets/software/"
+        },
+        {
+            "name": "computers-tablets/networking/"
+        },
+        {
+            "name": "computers-tablets/printers/"
+        },
+        {
+            "name": "computers-tablets/storage/"
+        },
+        {
+            "name": "computers-tablets/accessories/"
+        },
+        {
+            "name": "computers-tablets/ebook-readers/"
+        },
+        {
+            "name": "computers-tablets/ebook-reader-accessories/"
+        }
+    ]
+}

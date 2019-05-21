@@ -7,7 +7,7 @@ def scrape(category_url, selector, driver):
     total_products = 0
 
     # output to a file
-    with open("temp_dump.csv", "w", newline="") as csv_file:
+    with open("temp_woolworths_dump.csv", "w", newline="") as csv_file:
         writer = csv.writer(csv_file)
         writer.writerow(["product_name", "price"])
 
@@ -15,7 +15,7 @@ def scrape(category_url, selector, driver):
             # getting single products on the page
             print("Getting single products on the page...")
             single_products = get_products(
-                category_url, page_number, selector["single_product_selector"], driver
+                category_url, page_number, selector["single_products_selector"], driver
             )
             if single_products:
                 for single_product in single_products:
@@ -107,5 +107,5 @@ def get_products(scrape_url, page_number, selector, driver):
     print(f"Crawling page {scrape_url_with_page}")
     time.sleep(2)
     products = driver.find_elements_by_xpath(selector)
-    print(f"{len(products)} products on the page.")
+    print(f"{len(products)} products on the page...")
     return products

@@ -1,43 +1,60 @@
 {
     "categories": [
         {
-            "name": "computers-tablets/apple-macbook/"
+            "name": "computers-laptops",
+            "url": "computers-tablets/laptops/"
         },
         {
-            "name": "computers-tablets/dell-laptops/"
+            "name": "computers-tablets",
+            "url": "computers-tablets/tablets/"
         },
         {
-            "name": "computers-tablets/hp-laptops/"
+            "name": "computers-desktops",
+            "url": "computers-tablets/desktops/"
         },
         {
-            "name": "computers-tablets/surface/"
+            "name": "computers-monitors",
+            "url": "computers-tablets/monitors/"
         },
         {
-            "name": "computers-tablets/lenovo-laptops/"
+            "name": "computers-monitor-stands",
+            "url": "computers-tablets/monitor-mounts--stands/"
         },
         {
-            "name": "computers-tablets/"
+            "name": "computers-virtual-reality",
+            "url": "computers-tablets/virtual-reality/"
         },
         {
-            "name": "computers-tablets/"
+            "name": "computers-projectors",
+            "url": "computers-tablets/projectors/"
         },
         {
-            "name": "computers-tablets/"
+            "name": "computers-software",
+            "url": "computers-tablets/software/"
         },
         {
-            "name": "computers-tablets/"
+            "name": "computers-networking",
+            "url": "computers-tablets/networking/"
         },
         {
-            "name": "computers-tablets/"
+            "name": "computers-printers",
+            "url": "computers-tablets/printers/"
         },
         {
-            "name": "computers-tablets/"
+            "name": "computers-storage",
+            "url": "computers-tablets/storage/"
         },
         {
-            "name": "computers-tablets/"
+            "name": "computers-accessories",
+            "url": "computers-tablets/accessories/"
         },
         {
-            "name": "computers-tablets/"
+            "name": "computers-ebook-readers",
+            "url": "computers-tablets/ebook-readers/"
+        },
+        {
+            "name": "computers-ebook-accessories",
+            "url": "computers-tablets/ebook-reader-accessories/"
         }
     ]
 }

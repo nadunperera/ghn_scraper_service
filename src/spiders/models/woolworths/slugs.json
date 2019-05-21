@@ -1,43 +1,43 @@
 {
     "categories": [
         {
-            "name": "fruit-veg"
+            "url": "fruit-veg"
         },
         {
-            "name": "meat-seafood-deli"
+            "url": "meat-seafood-deli"
         },
         {
-            "name": "bakery"
+            "url": "bakery"
         },
         {
-            "name": "dairy-eggs-fridge"
+            "url": "dairy-eggs-fridge"
         },
         {
-            "name": "pantry"
+            "url": "pantry"
         },
         {
-            "name": "freezer"
+            "url": "freezer"
         },
         {
-            "name": "drinks"
+            "url": "drinks"
         },
         {
-            "name": "liquor"
+            "url": "liquor"
         },
         {
-            "name": "pet"
+            "url": "pet"
         },
         {
-            "name": "baby"
+            "url": "baby"
         },
         {
-            "name": "health-beauty"
+            "url": "health-beauty"
         },
         {
-            "name": "household"
+            "url": "household"
         },
         {
-            "name": "lunch-box"
+            "url": "lunch-box"
         }
     ]
 }

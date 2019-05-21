@@ -1,4 +1,4 @@
-from src.spiders.controllers import woolworths
+from src.spiders.controllers import woolworths, jbhifi
 from src.helpers import pandas
 import json
 
@@ -14,12 +14,16 @@ class Crawl:
         with open(f"src/spiders/models/{self.model_name}/slugs.json") as json_file:
             data = json.load(json_file)
             for category in data["categories"]:
-                category_url = path["start_url"] + category["name"]
+                category_url = path["start_url"] + category["url"]
                 print(self.model_name + " category URL is " + category_url)
                 if self.model_name is "woolworths":
                     woolworths.scrape(category_url, path, self.driver)
                     # distinct results, create final output file
-                    pandas.distinct(self.model_name + "-" + category["name"] + ".csv")
+                    pandas.distinct(self.model_name, category["url"])
+                elif self.model_name is "jbhifi":
+                    jbhifi.scrape(category_url, path, self.driver)
+                    # distinct results, create final output file
+                    pandas.distinct(self.model_name, category["name"])
                 total_categories += 1
         print(
             "Number of categories crawled in "
@@ -33,11 +37,19 @@ class Crawl:
             data = json.load(json_file)
             for path in data["paths"]:
                 print(self.model_name + " start URL is " + path["startUrl"])
-                print(self.model_name + " single product selector is " + path["singleProductsXpath"])
-                print(self.model_name + " bundle product selector is " + path["bundleProductsXpath"])
+                print(
+                    self.model_name
+                    + " single product selector is "
+                    + path["singleProductsXpath"]
+                )
+                print(
+                    self.model_name
+                    + " bundle product selector is "
+                    + path["bundleProductsXpath"]
+                )
                 output = {}
                 output["start_url"] = path["startUrl"]
-                output["single_product_selector"] = path["singleProductsXpath"]
+                output["single_products_selector"] = path["singleProductsXpath"]
                 output["single_product_name"] = path["singleProductName"]
                 output["single_product_dollar"] = path["singleProductDollar"]
                 output["single_product_cents"] = path["singleProductCents"]
