@@ -15,9 +15,12 @@ ghn_scraper_service is a collection of scrapers written using selenium and pytho
     $ python scrape.py
 
 ### Output
-    Crawl results will be written in to crawl_results.csv. Pandas will be used to remove duplicates and 
-    output will be written in to output.csv.
+    Output will be written into a CSV file on root.
 
 ### Current Scrapers
 * Woolworths
 * JB Hi-Fi
+
+### Todo
+* Need to arrange the files and folders properly.
+* Need to decide on class and function requirements.
