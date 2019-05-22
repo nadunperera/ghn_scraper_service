@@ -1,15 +1,15 @@
 {
     "paths": [
         {
-            "startUrl": "https://www.woolworths.com.au/shop/browse/",
-            "singleProductsXpath": "//wow-tile/div/wow-shelf-product-tile",
-            "singleProductName": "shelfProductTile-descriptionLink",
-            "singleProductDollar": "price-dollars",
-            "singleProductCents": "price-centsPer",
-            "bundleProductsXpath": "//wow-tile/div/wow-shelf-bundle-tile",
-            "bundleProductTitle": "shelfBundleTile-title",
-            "bundleProductNames": "shelfProductVariant-variant",
-            "bundleProductPrices": "shelfProductVariant-price"
+            "start_url": "https://www.woolworths.com.au/shop/browse/",
+            "single_product_tile": "//wow-tile/div/wow-shelf-product-tile",
+            "single_product_name": "shelfProductTile-descriptionLink",
+            "single_product_dollar": "price-dollars",
+            "single_product_cents": "price-centsPer",
+            "bundle_product_tile": "//wow-tile/div/wow-shelf-bundle-tile",
+            "bundle_product_title": "shelfBundleTile-title",
+            "bundle_product_names": "shelfProductVariant-variant",
+            "bundle_product_prices": "shelfProductVariant-price"
         }
     ]
 }

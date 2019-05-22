@@ -2,7 +2,7 @@ import time, csv
 from selenium.common.exceptions import NoSuchElementException
 
 
-def scrape(category_url, selector, driver):
+def scrape(category_url, paths_dict, driver):
     page_number = 1
     total_products = 0
 
@@ -15,22 +15,22 @@ def scrape(category_url, selector, driver):
             # getting single products on the page
             print("Getting single products on the page...")
             single_products = get_products(
-                category_url, page_number, selector["single_products_selector"], driver
+                category_url, page_number, paths_dict.get("single_product_tile"), driver
             )
             if single_products:
                 for single_product in single_products:
                     product_name = single_product.find_element_by_class_name(
-                        selector["single_product_name"]
+                        paths_dict.get("single_product_name")
                     ).text
                     try:
                         # getting dollars and cents and connecting together with a dot
                         price = (
                             single_product.find_element_by_class_name(
-                                selector["single_product_dollar"]
+                                paths_dict.get("single_product_dollar")
                             ).text
                             + "."
                             + single_product.find_element_by_class_name(
-                                selector["single_product_cents"]
+                                paths_dict.get("single_product_cents")
                             ).text
                         )
                         writer.writerow([product_name, price])
@@ -44,20 +44,20 @@ def scrape(category_url, selector, driver):
                 bundle_products = get_products(
                     category_url,
                     page_number,
-                    selector["bundle_product_selector"],
+                    paths_dict.get("bundle_product_tile"),
                     driver,
                 )
                 if bundle_products:
                     for bundle_product in bundle_products:
                         try:
                             bundle_product_title = bundle_product.find_element_by_class_name(
-                                selector["bundle_product_title"]
+                                paths_dict.get("bundle_product_title")
                             ).text
                             bundle_product_names = bundle_product.find_elements_by_class_name(
-                                selector["bundle_product_names"]
+                                paths_dict.get("bundle_product_names")
                             )
                             bundle_product_prices = bundle_product.find_elements_by_class_name(
-                                selector["bundle_product_prices"]
+                                paths_dict.get("bundle_product_prices")
                             )
                             bundle_product_price_index = 0
 
@@ -96,13 +96,13 @@ def scrape(category_url, selector, driver):
                 break
 
 
-def get_next_page(scrape_url, page_number):
+def get_page(scrape_url, page_number):
     scrape_url = scrape_url + f"?pageNumber={page_number}"
     return scrape_url
 
 
 def get_products(scrape_url, page_number, selector, driver):
-    scrape_url_with_page = get_next_page(scrape_url, page_number)
+    scrape_url_with_page = get_page(scrape_url, page_number)
     driver.get(scrape_url_with_page)
     print(f"Crawling page {scrape_url_with_page}")
     time.sleep(2)

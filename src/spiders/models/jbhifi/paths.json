@@ -1,10 +1,10 @@
 {
     "paths": [
         {
-            "startUrl": "https://www.jbhifi.com.au/",
-            "singleProductsXpath": "//*[@id='productsContainer']/ul/li[3]/div",
-            "singleProductName": ".//h4",
-            "singleProductDollar": "p.price>span.amount"
+            "start_url": "https://www.jbhifi.com.au/",
+            "single_product_tile": "//*[@id='productsContainer']/ul/li[3]/div",
+            "single_product_name": ".//h4",
+            "single_product_dollar": "p.price>span.amount"
         }
     ]
 }
