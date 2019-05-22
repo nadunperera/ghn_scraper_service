@@ -1,0 +1,60 @@
+{
+    "categories": [
+        {
+            "name": "computers-laptops",
+            "url": "computers-tablets/laptops/"
+        },
+        {
+            "name": "computers-tablets",
+            "url": "computers-tablets/tablets/"
+        },
+        {
+            "name": "computers-desktops",
+            "url": "computers-tablets/desktops/"
+        },
+        {
+            "name": "computers-monitors",
+            "url": "computers-tablets/monitors/"
+        },
+        {
+            "name": "computers-monitor-stands",
+            "url": "computers-tablets/monitor-mounts--stands/"
+        },
+        {
+            "name": "computers-virtual-reality",
+            "url": "computers-tablets/virtual-reality/"
+        },
+        {
+            "name": "computers-projectors",
+            "url": "computers-tablets/projectors/"
+        },
+        {
+            "name": "computers-software",
+            "url": "computers-tablets/software/"
+        },
+        {
+            "name": "computers-networking",
+            "url": "computers-tablets/networking/"
+        },
+        {
+            "name": "computers-printers",
+            "url": "computers-tablets/printers/"
+        },
+        {
+            "name": "computers-storage",
+            "url": "computers-tablets/storage/"
+        },
+        {
+            "name": "computers-accessories",
+            "url": "computers-tablets/accessories/"
+        },
+        {
+            "name": "computers-ebook-readers",
+            "url": "computers-tablets/ebook-readers/"
+        },
+        {
+            "name": "computers-ebook-accessories",
+            "url": "computers-tablets/ebook-reader-accessories/"
+        }
+    ]
+}

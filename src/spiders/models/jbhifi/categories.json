@@ -55,6 +55,78 @@
         {
             "name": "computers-ebook-accessories",
             "url": "computers-tablets/ebook-reader-accessories/"
+        },
+        {
+            "name": "tvs-tvs",
+            "url": "tvs/all-tvs/"
+        },
+        {
+            "name": "tvs-media-streaming",
+            "url": "tvs/all-media-streaming/"
+        },
+        {
+            "name": "tvs-accessories",
+            "url": "tvs/all-audio-visual-accessories/"
+        },
+        {
+            "name": "audio-headphones",
+            "url": "headphones-speakers-audio/headphones/"
+        },
+        {
+            "name": "audio-speakers",
+            "url": "headphones-speakers-audio/speakers/"
+        },
+        {
+            "name": "audio-smart-speakers",
+            "url": "headphones-speakers-audio/smart-speakers/"
+        },
+        {
+            "name": "audio-av-recievers",
+            "url": "headphones-speakers-audio/av-receivers/"
+        },
+        {
+            "name": "audio-turntables",
+            "url": "headphones-speakers-audio/turntables/"
+        },
+        {
+            "name": "audio-hifi-systems",
+            "url": "headphones-speakers-audio/mini-micro-hi-fi-systems/"
+        },
+        {
+            "name": "audio-cd-players",
+            "url": "headphones-speakers-audio/cd-players/"
+        },
+        {
+            "name": "audio-digital-radios",
+            "url": "headphones-speakers-audio/digital-radios/"
+        },
+        {
+            "name": "audio-amfm-radios",
+            "url": "headphones-speakers-audio/amfm-radios/"
+        },
+        {
+            "name": "audio-ipods",
+            "url": "headphones-speakers-audio/ipods-and-portable-music-players/"
+        },
+        {
+            "name": "audio-voice-recorders",
+            "url": "headphones-speakers-audio/voice-recorders/"
+        },
+        {
+            "name": "audio-accessories",
+            "url": "headphones-speakers-audio/audio-accessories/"
+        },
+        {
+            "name": "connected-home-security",
+            "url": "connected-home/all-home-security/"
+        },
+        {
+            "name": "connected-home-lighting",
+            "url": "connected-home/smart-lighting/"
+        },
+        {
+            "name": "connected-home-lighting",
+            "url": "connected-home/smart-lighting/"
         }
     ]
 }
