@@ -1,5 +1,6 @@
 import time, csv
 from selenium.common.exceptions import NoSuchElementException
+from src.spiders.controllers import common
 
 
 def scrape(category_url, paths_dict, driver):
@@ -12,8 +13,9 @@ def scrape(category_url, paths_dict, driver):
 
         while True:
             print("Getting standard products on the page...")
-            products = get_products(
-                category_url, page_number, paths_dict.get("single_product_tile"), driver
+            scrape_url_with_page = common.get_page("jbhifi", category_url, page_number)
+            products = common.get_products(
+                scrape_url_with_page, paths_dict.get("single_product_tile"), driver
             )
             if products:
                 for product in products:
@@ -26,24 +28,9 @@ def scrape(category_url, paths_dict, driver):
                         ).text
                         writer.writerow([product_name, product_price])
                     except NoSuchElementException:
-                        pass # skipped if no element found
+                        pass  # skipped if no element found
                 total_products = total_products + len(products)
                 print(f"Total number of products added to the csv: {total_products}")
                 page_number += 1
             else:
                 break
-
-
-def get_page(scrape_url, page_number):
-    scrape_url = scrape_url + f"?p={page_number}"
-    return scrape_url
-
-
-def get_products(scrape_url, page_number, selector, driver):
-    scrape_url_with_page = get_page(scrape_url, page_number)
-    driver.get(scrape_url_with_page)
-    print(f"Crawling page {scrape_url_with_page}")
-    time.sleep(2)
-    products = driver.find_elements_by_xpath(selector)
-    print(f"{len(products)} products on the page...")
-    return products

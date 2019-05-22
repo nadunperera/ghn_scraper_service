@@ -1,5 +1,6 @@
 import time, csv
 from selenium.common.exceptions import NoSuchElementException
+from src.spiders.controllers import common
 
 
 def scrape(category_url, paths_dict, driver):
@@ -14,8 +15,11 @@ def scrape(category_url, paths_dict, driver):
         while True:
             # getting single products on the page
             print("Getting single products on the page...")
-            single_products = get_products(
-                category_url, page_number, paths_dict.get("single_product_tile"), driver
+            scrape_url_with_page = common.get_page(
+                "woolworths", category_url, page_number
+            )
+            single_products = common.get_products(
+                scrape_url_with_page, paths_dict.get("single_product_tile"), driver
             )
             if single_products:
                 for single_product in single_products:
@@ -41,11 +45,11 @@ def scrape(category_url, paths_dict, driver):
 
                 # getting bundle products on the same page
                 print("Getting bundle products on the page...")
-                bundle_products = get_products(
-                    category_url,
-                    page_number,
-                    paths_dict.get("bundle_product_tile"),
-                    driver,
+                scrape_url_with_page = common.get_page(
+                    "woolworths", category_url, page_number
+                )
+                bundle_products = common.get_products(
+                    scrape_url_with_page, paths_dict.get("bundle_product_tile"), driver
                 )
                 if bundle_products:
                     for bundle_product in bundle_products:
@@ -94,18 +98,3 @@ def scrape(category_url, paths_dict, driver):
                 page_number += 1
             else:
                 break
-
-
-def get_page(scrape_url, page_number):
-    scrape_url = scrape_url + f"?pageNumber={page_number}"
-    return scrape_url
-
-
-def get_products(scrape_url, page_number, selector, driver):
-    scrape_url_with_page = get_page(scrape_url, page_number)
-    driver.get(scrape_url_with_page)
-    print(f"Crawling page {scrape_url_with_page}")
-    time.sleep(2)
-    products = driver.find_elements_by_xpath(selector)
-    print(f"{len(products)} products on the page...")
-    return products

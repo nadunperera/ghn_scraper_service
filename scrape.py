@@ -11,4 +11,4 @@ from src.spiders import start
 
 driver = browser.Driver("http://127.0.0.1:4444/wd/hub")
 
-start.crawl(driver.chrome, "woolworths")
+start.crawl(driver.chrome, "jbhifi")
