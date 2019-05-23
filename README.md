@@ -20,7 +20,3 @@ ghn_scraper_service is a collection of scrapers written using selenium and pytho
 ### Current Scrapers
 * Woolworths
 * JB Hi-Fi
-
-### Todo
-* Need to add all categories to src/spiders/models/jbhifi/categories.json
-* Need to decide on class and function requirements.
